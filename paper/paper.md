@@ -1,162 +1,54 @@
 ---
-title: 'DBCLS BioHackathon 2025 report: Template for the very long title'
+title: 'GA4GH VRS for the Semantic Web'
 title_short: 'BioHackJP25: How we found breakfast'
 tags:
   - Semantic web
-  - Ontologies
-  - Workflows
+  - GA4GH VRS
+  - RDF
+  - Genomic variants
 authors:
-  - name: First Author
+  - name: Núria Queralt-Rosinach
+    orcid: 0000-0003-0169-8159
     affiliation: 1
-  - name: Last Author
-    orcid: 0000-0000-0000-0000
-    affiliation: 2
 affiliations:
-  - name: First Affiliation
+  - name: Leiden University Medical Center
     index: 1
-  - name: ELIXIR Europe
-    ror: 044rwnt51
-    index: 2
-date: 15 September 2025
+date: 31 August 2024
 cito-bibliography: paper.bib
-event: BH25JP
-biohackathon_name: "DBCLS BioHackathon 2025"
-biohackathon_url:   "https://2025.biohackathon.org/"
-biohackathon_location: "Mie, Japan, 2025"
-group: YOUR-PROJECT-NAME-GOES-HERE
-# URL to project git repo --- should contain the actual paper.md:
-git_url: https://github.com/biohackathon-japan/bh25-bhxiv-template
-# This is the short authors description that is used at the
-# bottom of the generated paper (typically the first two authors):
-authors_short: First Author \emph{et al.}
+event: BH24JP
+biohackathon_name: "DBCLS BioHackathon 2024"
+biohackathon_url:   "https://2024.biohackathon.org/"
+biohackathon_location: "Fukushima, Japan, 2024"
+group: genome-variation
+git_url: https://github.com/NuriaQueralt/BH24-ga4gh-vrs-rdf-schema
+authors_short: Queralt-Rosinach \emph{et al.}
 ---
 
 # Introduction
-
-As part of the DBCLS BioHackathon 2025, we here report...
-
-## Author information
-
-Information about the authors is given in the [YAML](https://en.wikipedia.org/wiki/YAML) format at the top of this template.
-For authors you provide their names, their affiliations, and ideally their [ORCID](https://orcid.org/)
-identifier. For affiliations, the [Research Organization Registry](https://ror.org/) (ROR) identifier can be given.
-For example, this is the author information for this template:
-
-```yaml
-authors:
-  - name: First Author
-    affiliation: 1
-  - name: Last Author
-    orcid: 0000-0000-0000-0000
-    affiliation: 2
-affiliations:
-  - name: First Affiliation
-    index: 1
-  - name: ELIXIR Europe
-    ror: 044rwnt51
-    index: 2
-```
-
-# Formatting
-
-This document use Markdown and you can look at [this tutorial](https://www.markdowntutorial.com/).
-
-## Subsection level 2
-
-Please keep sections to a maximum of only two levels.
-
-## Tables
-
-Tables can be added in the following way, though alternatives are possible:
-
-```markdown
-Table: Note that table caption is automatically numbered and should be
-given before the table itself.
-
-| Header 1 | Header 2 |
-| -------- | -------- |
-| item 1 | item 2 |
-| item 3 | item 4 |
-```
-
-This gives:
-
-Table: Note that table caption is automatically numbered and should be
-given before the table itself.
-
-| Header 1 | Header 2 |
-| -------- | -------- |
-| item 1 | item 2 |
-| item 3 | item 4 |
-
-## Figures
-
-A figure is added with:
-
-```markdown
-![Caption for BioHackrXiv logo figure](./biohackrxiv.png)
-```
-
-This gives:
-
-![Caption for BioHackrXiv logo figure](./biohackrxiv.png)
-
-Figures can be scaled by adding the width or height to the Markdown like this:
-
-```markdown
-![Caption for BioHackrXiv logo figure](./biohackrxiv.png){ width=50px }
-```
-
-# Other main section on your manuscript level 1
-
-Lists can be added with:
-
-1. Item 1
-2. Item 2
-
-# Citation Typing Ontology annotation
-
-You can use [CiTO](http://purl.org/spar/cito/2018-02-12) annotations, as explained in [this BioHackathon Europe 2021 write up](https://raw.githubusercontent.com/biohackrxiv/bhxiv-metadata/main/doc/elixir_biohackathon2021/paper.md) and [this CiTO Pilot](https://www.biomedcentral.com/collections/cito).
-Using this template, you can cite an article and indicate _why_ you cite that article, for instance DisGeNET-RDF [@citesAsAuthority:Queralt2016].
-
-The syntax in Markdown is as follows: a single intention annotation looks like
-`[@usesMethodIn:Krewinkel2017]`; two or more intentions are separated
-with colons, like `[@extends:discusses:Nielsen2017Scholia]`. When you cite two
-different articles, you use this syntax: `[@citesAsDataSource:Ammar2022ETL; @citesAsDataSource:Arend2022BioHackEU22]`.
-
-Possible CiTO typing annotation include:
-
-* citesAsDataSource: when you point the reader to a source of data which may explain a claim
-* usesDataFrom: when you reuse somehow (and elaborate on) the data in the cited entity
-* usesMethodIn
-* citesAsAuthority
-* citesAsEvidence
-* citesAsPotentialSolution
-* citesAsRecommendedReading
-* citesAsRelated
-* citesAsSourceDocument
-* citesForInformation
-* confirms
-* documents
-* providesDataFor
-* obtainsSupportFrom
-* discusses
-* extends
-* agreesWith
-* disagreesWith
-* updates
-* citation: generic citation
+There is currently no standardized representation of genomic variants in RDF. The Variation Representation Specification (VRS) is a GA4GH-approved standard intended to support exchange of genomic variation data between computational systems [@citesAsAuthority:Wagner2021]. VRS provides a terminology and information model that in combination with the decision design of using variants represented as VRS objects (and inheritance) enables users to focus on semantic precision and describe from simple to complex variations in a flexible way. Currently, VRS machine-readable schema is written in YAML (see the schema on [GitHub](https://github.com/ga4gh/vrs/blob/2.x/schema/vrs/vrs-source.yaml)) and implemented in JSON Schema (see the JSON implementation on [GitHub](https://github.com/ga4gh/vrs/tree/2.x/schema/vrs/json)). However, the VRS schema cannot be readily translated to semantic web frameworks since it lacks of this support. Furthermore, there is a lack of recommended ontologies that can be used for more precise semantics and interoperability with the bioinformatics community. To address this issue we modelled an VRS RDF Schema to enable interoperability of using this standard within the semantic web community.
 
 
 # Results
+## Implementation
+We implemented an RDF Schema in ShEx, using OWL ontologies in the [OBO Foundry](https://obofoundry.org/) such as the [NCI Thesaurus (NCIT)](https://obofoundry.org/ontology/ncit.html), the [Semanticscience Integrated Ontology (SIO)](https://github.com/MaastrichtU-IDS/semanticscience), and the [Genome Variation Ontology (GVO)](http://genome-variation.org/resource/gvo). We based our modelling on the [VRS Schema expressed in YAML](https://github.com/ga4gh/vrs/tree/2.x/schema/vrs) accessed during the BioHackathon 2024 week, i.e., 25-31 August and in the design principles currently used to update the GA4GH Phenopackets standard in RDF [@citation:Kaliyaperumal_2022]
 
+## GA4GH VRS RDF schema
+GA4GH VRS RDF schema on [GitHub](https://github.com/NuriaQueralt/ga4gh-vrs-rdf-schema.git)
+
+![Illustration of the GA4GH VRS RDF schema as ShEx shapes.](ga4gh_vrs_schema_shex.png){width=50%}
+
+## Compliance
+We aligned our RDF work to the schema in the [YAML document](https://github.com/ga4gh/vrs/tree/2.x/schema/vrs) following the guide in the *Machine Readable Specifications* section of the [documentation](https://vrs.ga4gh.org/en/stable/schema.html#machine-readable-specifications). The degree of alignment achieved was 30\% (6 out of 21 objects) with the VRS specification and we followed a top-down approach such as the VRS abstraction itself, where everything rolls up to Variation. In particular, we aligned the following VRS objects: Ga4ghIdentifiableObject, Variation, Expression, MolecularVariation, SystemicVariation and Allele. We used the ShEx inheritance feature to express the VRS object oriented design.
 
 # Discussion
+We modelled the GA4GH VRS standard into RDF to standardise genomic variation description. The importance of aligning with VRS is for interoperability with semantic web technologies, frameworks and linked data networks such as the [https://rdfportal.org/](https://rdfportal.org/), the European Joint Programme Rare Diseases Virtual Platform or the SPHN federated health data network, and with tools such as VRSAnnotator ([https://github.com/ohsu-comp-bio/vrs-annotator/tree/main](https://github.com/ohsu-comp-bio/vrs-annotator/tree/main)) for further VCF annotation.
 
-...
+## Future work
+To finish the RDF modelling for all the objects of the VRS specification. To demonstrate the model with a use case.
+
+We welcome feedback and contributions from the community. Please, use the issue and pull requests system at https://github.com/NuriaQueralt/ga4gh-vrs-rdf-schema
 
 ## Acknowledgements
-
-...
+We thank the DBCLS BioHackathon 2024 organizers for hosting the event and providing support. 
 
 ## References
