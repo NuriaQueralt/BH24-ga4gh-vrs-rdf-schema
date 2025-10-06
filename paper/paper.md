@@ -1,6 +1,6 @@
 ---
 title: 'GA4GH VRS for the Semantic Web'
-title_short: 'BioHackJP25: How we found breakfast'
+title_short: 'GA4GH VRS RDF'
 tags:
   - Semantic web
   - GA4GH VRS
@@ -30,7 +30,7 @@ There is currently no standardized representation of genomic variants in RDF. Th
 
 # Results
 ## Implementation
-We implemented an RDF Schema in ShEx, using OWL ontologies in the [OBO Foundry](https://obofoundry.org/) such as the [NCI Thesaurus (NCIT)](https://obofoundry.org/ontology/ncit.html), the [Semanticscience Integrated Ontology (SIO)](https://github.com/MaastrichtU-IDS/semanticscience), and the [Genome Variation Ontology (GVO)](http://genome-variation.org/resource/gvo). We based our modelling on the [VRS Schema expressed in YAML](https://github.com/ga4gh/vrs/tree/2.x/schema/vrs) accessed during the BioHackathon 2024 week, i.e., 25-31 August and in the design principles currently used to update the GA4GH Phenopackets standard in RDF [@citation:Kaliyaperumal_2022]
+We implemented an RDF Schema in ShEx, using OWL ontologies in the [OBO Foundry](https://obofoundry.org/) such as the [NCI Thesaurus (NCIT)](https://obofoundry.org/ontology/ncit.html), the [Semanticscience Integrated Ontology (SIO)](https://github.com/MaastrichtU-IDS/semanticscience), and the [Genome Variation Ontology (GVO)](http://genome-variation.org/resource/gvo). We based our modelling on the [VRS Schema expressed in YAML](https://github.com/ga4gh/vrs/tree/2.x/schema/vrs) accessed during the BioHackathon 2024 week, i.e., 25-31 August and in the design principles currently used to update the GA4GH Phenopackets standard in RDF [@citesAsAuthority:Kaliyaperumal2022]
 
 ## GA4GH VRS RDF schema
 GA4GH VRS RDF schema on [GitHub](https://github.com/NuriaQueralt/ga4gh-vrs-rdf-schema.git)
@@ -44,7 +44,10 @@ We aligned our RDF work to the schema in the [YAML document](https://github.com/
 We modelled the GA4GH VRS standard into RDF to standardise genomic variation description. The importance of aligning with VRS is for interoperability with semantic web technologies, frameworks and linked data networks such as the [https://rdfportal.org/](https://rdfportal.org/), the European Joint Programme Rare Diseases Virtual Platform or the SPHN federated health data network, and with tools such as VRSAnnotator ([https://github.com/ohsu-comp-bio/vrs-annotator/tree/main](https://github.com/ohsu-comp-bio/vrs-annotator/tree/main)) for further VCF annotation.
 
 ## Future work
-To finish the RDF modelling for all the objects of the VRS specification. To demonstrate the model with a use case.
+Some next steps are:
+- To finish the RDF modelling for all the objects of the VRS specification.
+- To check the interoperability with GA4GH Phenopackets RDF schema.
+- To demonstrate the model with several use cases.
 
 We welcome feedback and contributions from the community. Please, use the issue and pull requests system at https://github.com/NuriaQueralt/ga4gh-vrs-rdf-schema
 
