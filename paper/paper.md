@@ -10,9 +10,14 @@ authors:
   - name: Núria Queralt-Rosinach
     orcid: 0000-0003-0169-8159
     affiliation: 1
+  - name: Jose Emilio Labra Gayo
+    orcid: 0000-0001-8907-5348
+    affiliation: 2
 affiliations:
   - name: Leiden University Medical Center
     index: 1
+  - name: WESO Lab - University of Oviedo
+    index: 2
 date: 31 August 2024
 cito-bibliography: paper.bib
 event: BH24JP
