@@ -10,14 +10,19 @@ authors:
   - name: Núria Queralt-Rosinach
     orcid: 0000-0003-0169-8159
     affiliation: 1
+  - name: Pitiporn Noisagul
+    orcid: 0000-0001-5351-9998
+    affiliation: 2    
   - name: Jose Emilio Labra Gayo
     orcid: 0000-0001-8907-5348
-    affiliation: 2
+    affiliation: 3
 affiliations:
-  - name: Leiden University Medical Center
+  - name: Leiden University Medical Center, The Netherlands
     index: 1
-  - name: WESO Lab - University of Oviedo
+  - name: Center of Multidisciplinary Technology for Advanced Medicine (CMUTEAM), Faculty of Medicine, Chiang Mai University, Thailand
     index: 2
+  - name: WESO Lab - University of Oviedo, Spain
+    index: 3
 date: 31 August 2024
 cito-bibliography: paper.bib
 event: BH24JP
