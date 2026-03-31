@@ -61,9 +61,10 @@ We modelled the GA4GH VRS into RDF to standardise the description of genomic var
 
 ## Future work
 Some next steps are:
-- To finish the RDF modelling for all the objects of the VRS specification.
-- To check the interoperability with GA4GH Phenopackets RDF schema.
-- To demonstrate the model with several use cases.
+
+    - To finish the RDF modelling for all the objects of the VRS specification.
+    - To check the interoperability with GA4GH Phenopackets RDF schema.
+    - To demonstrate the model with several use cases.
 
 We welcome feedback and contributions from the community. Please, use the issue and pull requests system at https://github.com/NuriaQueralt/ga4gh-vrs-rdf-schema
 
