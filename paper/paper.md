@@ -49,7 +49,7 @@ We implemented an RDF Schema in ShEx, using OWL ontologies in the [OBO Foundry](
 ## GA4GH VRS RDF schema
 Here, we show an illustration of the schema we developed during the hackathon. We chose standard and commonly-used ontologies in the life sciences and rare disease communities to annotate entities, properties and attributes. The image of the RDF Schema was automatically generated from the ShEx files using the [RDFShape](https://rdfshape.weso.es/) visualization functionality.
 
-![Illustration of the GA4GH VRS RDF schema as ShEx shapes.](ga4gh_vrs_schema_shex.png){width=50%}
+![Illustration of the GA4GH VRS RDF schema as ShEx shapes.](ga4gh_vrs_schema_shex.png)
 
 The GA4GH VRS RDF schema is available on [GitHub](https://github.com/NuriaQueralt/ga4gh-vrs-rdf-schema.git).
 
